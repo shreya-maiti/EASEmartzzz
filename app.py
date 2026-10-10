@@ -1,12 +1,17 @@
-"""
+"""EASEmartzzz: a demo grocery storefront built with Streamlit.
 
 Run with:  streamlit run app.py
 
 This file configures navigation centrally. Every page in pages/ is registered
 here, and the navbar and footer are drawn around whichever page is active.
 """
+import sys
+from pathlib import Path
+
 import streamlit as st
 
+# Make sure the project root is importable (needed on Streamlit Cloud).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 # set_page_config must be the first Streamlit command.
 st.set_page_config(
     page_title="EASEmartzzz | Fresh groceries, easy shopping",
